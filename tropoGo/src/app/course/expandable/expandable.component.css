@@ -1,0 +1,19 @@
+h5{
+    font-weight: 400;
+}
+
+.Costform.mat-form-field.wrapper{
+    padding-bottom: 0px;
+}
+
+@media(max-width:425px){
+    mat-panel-title.h5{
+        font-size: 8px;
+    }
+}
+
+@media(max-width:768px){
+    div.h5{
+        font-size: 9px;
+    }
+}

@@ -1,0 +1,27 @@
+<div fxLayout="column" fxLayoutGap="40px" fxLayoutGap.lt-md="20px" fxLayoutGap.lt-sm="10px">
+   <div *ngFor="let category of categories;let i=index;" fxLayout="column" >
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+          <div fxLayout="row" fxLayoutGap="10px" style="height: 40px;">
+             <h5>{{category}}</h5>
+             <h5 *ngIf="i!==2" style="font-size: 12px;font-weight: 100;">(Optional)</h5>
+             <h5 *ngIf="i==2" style="font-size: 12px;font-weight: 100;">(Required)</h5>
+          </div>
+          <div>
+                <button (click)="upload(i)" mat-button style="color: #147DF6;font-size: 12px;">UPLOAD</button>
+          </div>
+      </div>
+      <mat-divider></mat-divider><div style="padding: 8px;color: red;" *ngIf="compulsory && i===2">this is Required</div>
+      <mat-list  fxLayout="column" >
+         <div  *ngFor="let item of itemsArr[i];let in=index" >
+            <div fxLayout >
+              <mat-list-item > {{item}} </mat-list-item>
+              <mat-icon (click)="delete(i,in)" color="warn">delete</mat-icon>
+            </div>
+           
+           <mat-divider></mat-divider>
+         </div>
+       
+     </mat-list>
+  </div>
+  
+</div>
