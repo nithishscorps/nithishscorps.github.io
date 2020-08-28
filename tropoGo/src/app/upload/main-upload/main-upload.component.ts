@@ -13,7 +13,7 @@ export class MainUploadComponent implements OnInit {
  
   itemsArr = [[],[],[]];
   compulsory:boolean;
-  categories=["INSTITUTE BROUCHER","CERTIFICATIONS","INSTITUTE/COURSE GALLERY"];
+  categories=["INSTITUTE BROUCHER","CERTIFICATIONS","INSTITUTE GALLERY"];
   constructor(private data:DataStorageService) { }
 
   ngOnInit() {

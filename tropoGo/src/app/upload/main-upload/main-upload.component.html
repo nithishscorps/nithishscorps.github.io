@@ -1,10 +1,10 @@
-<div fxLayout="column" fxLayoutGap="40px" fxLayoutGap.lt-md="20px" fxLayoutGap.lt-sm="10px">
+<div fxLayout="column" fxLayoutGap="30px" fxLayoutGap.lt-md="20px" fxLayoutGap.lt-sm="10px">
    <div *ngFor="let category of categories;let i=index;" fxLayout="column" >
       <div fxLayout="row" fxLayoutAlign="space-between center">
-          <div fxLayout="row" fxLayoutGap="10px" style="height: 40px;">
+          <div fxLayout="row" fxLayoutGap="10px" style="height: 30px;">
              <h5>{{category}}</h5>
              <h5 *ngIf="i!==2" style="font-size: 12px;font-weight: 100;">(Optional)</h5>
-             <h5 *ngIf="i==2" style="font-size: 12px;font-weight: 100;">(Required)</h5>
+             <h5 *ngIf="i==2" [ngClass]="{'alert': compulsory}"  style="font-size: 12px;font-weight: 100;">(Required)</h5>
           </div>
           <div>
                 <button (click)="upload(i)" mat-button style="color: #147DF6;font-size: 12px;">UPLOAD</button>

@@ -10,24 +10,21 @@ import { Router, ActivatedRoute, NavigationStart } from '@angular/router';
 })
 export class BottomComponent implements OnInit {
   
-  sb:boolean=false;
-  constructor(private data:DataStorageService,private active:ActivatedRoute,private router:Router) { }
+  sb:boolean;
+  constructor(private data:DataStorageService,private router:Router) { }
  
   ngOnInit() {
+    this.sb=false;
+    this.data.componentEmitter.subscribe(comp => {
+      comp === "upload" ? this.sb=false:this.sb=true;
+      console.log(this.sb);
+});
    
-    this.active.snapshot._routerState._root.value.children[0].component.name === "CourseComponent" ? this.sb=true:this.sb=false;
+    //this.active.snapshot._routerState._root.value.children[0].component.name === "CourseComponent" ? this.sb=true:this.sb=false;
   
   }
   
-  next(){
-    if(this.data.items[this.data.items.length-1].length > 0){
-       this.sb=true;console.log("inside")
-       this.router.navigate(['/formPage']);
-    }
-    else {
-      this.data.requiredEmitter.next(true);
-    }
-  }
+  
 
 
   verify(){

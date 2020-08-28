@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, Router, NavigationStart } from '@angular/router';
+import { DataStorageService } from '../service/data-storage.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -9,16 +10,12 @@ import { ActivatedRoute, ActivatedRouteSnapshot, Router, NavigationStart } from 
 export class ToolbarComponent implements OnInit {
   load: number;
 
-  constructor(private ac:Router) { }
+  constructor(private data:DataStorageService){ }
 
   ngOnInit() {
 
-    this.ac.events.subscribe(e => {
-      if (e instanceof NavigationStart) {
-        
-        e.url === "/mainLoad" ? this.load=40:this.load=80;
-       
-      }
+    this.data.componentEmitter.subscribe(comp => {
+           comp === "upload" ? this.load=40:this.load=80;
     });
     
   }

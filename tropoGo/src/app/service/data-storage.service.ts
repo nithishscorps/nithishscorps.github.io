@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
+import { Router, NavigationStart } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -16,12 +17,27 @@ export class DataStorageService {
   
   requiredEmitter = new Subject<boolean>();
   verifyEmitter = new Subject<boolean[]>();
+  componentEmitter = new Subject();
   name: boolean;
   air: boolean;
   cst: boolean;
   cty: boolean;
 
-  constructor() { 
+  constructor(private ac:Router) { 
+
+
+    this.ac.events.subscribe(e => {
+      if (e instanceof NavigationStart) {
+        
+        e.url === "/mainLoad" ? this.componentEmitter.next("upload"):this.componentEmitter.next("form");
+       
+      }
+    });
+
+
+
+
+
     this.expansionForm = new FormGroup({
       city: new FormControl(null,Validators.required),
       lng: new FormControl(null,Validators.required),

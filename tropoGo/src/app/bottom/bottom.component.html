@@ -1,5 +1,6 @@
-<div class="toolbar" fxLayout="row" fxLayoutGap="30px" fxLayoutAlign="center center"> 
-    <button routerLink="/mainLoad" *ngIf="sb"  style="color: white;height: 30px;" color="accent" mat-raised-button>BACK</button> 
-    <button (click)="next()" *ngIf="!sb" style="color: white;height: 30px;" color="accent" mat-raised-button>NEXT</button>
-    <button *ngIf="sb" (click)="verify()" style="color: white;height: 30px;" color="accent" mat-raised-button>SAVE & PUBLISH</button> 
-  </div>
+<div class="bottom" fxLayout="row" fxLayoutGap="30px" fxLayoutAlign="start center" fxLayoutAlign.lt-md="center center"> 
+    <div fxFlex="17" fxFlex.lt-md="0"></div>
+    <button  routerLink="/mainLoad"   style="color: white;height: 30px;" color="accent" mat-raised-button>BACK</button> 
+   
+    <button  (click)="verify()" style="color: white;height: 30px;" color="accent" mat-raised-button>SAVE & PUBLISH</button> 
+</div>
