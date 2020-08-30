@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main\" fxLayout=\"row\">\n    <div style=\"width: 100%;height: 100%;\" fxFlex=\"100\" fxFlex.gt-md=\"50\">\n        <form [formGroup]=\"detailedForm\" (ngSubmit)=\"formSubmit()\" class=\"main1\" fxLayout=\"column\" fxLayoutGap=\"10px\">\n            <div>\n                <h1 >Add Course Details</h1>\n                <mat-divider></mat-divider>\n            </div>\n            <h4  style=\"margin-top: 6px;margin-bottom: 0px;\">COURSE </h4>\n            <div fxLayout=\"column\" fxLayoutGap=\"0px\" >\n                <h5 [ngClass]=\"{'alert': cname}\" style=\"margin: 0px;font-size: 12px;\"> Course Name</h5>\n                <div style=\"font-size: 1px;\">\n                  <mat-form-field  appearance=\"outline\" style=\"font-size: small;margin: 0px;width: 100%;\">\n                    <input formControlName=\"course_name\" style=\"border-top: 0px;\" matInput placeholder=\"Add course name\">\n                 </mat-form-field>\n                </div>\n            </div>\n            <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n                <h5 [ngClass]=\"{'alert': ctype}\" style=\"margin: 0px;font-size: 12px;\"> Aircraft Type </h5>\n                <mat-radio-group formControlName=\"aircraft_type\" aria-label=\"Select an option\" fxLayoutGap=\"20px\"> \n                    <mat-radio-button value=\"multi_rotar\"> Multi Rotar </mat-radio-button>\n                    <mat-radio-button value=\"fixed_wing\"> Fixed Wing </mat-radio-button>\n                  </mat-radio-group>\n            </div>\n            <router-outlet name=\"expand\"></router-outlet>\n            <div fxLayout fxLayoutAlign=\"start center\" style=\"height: 30px;cursor: pointer;\" (click)=\"add_batch()\">\n                <mat-icon color=\"accent\">add_circle</mat-icon>\n                <h6 style=\"color: rgb(62, 179, 7);font-size: 10px;\"  >ADD ANOTHER COURSE DATE</h6>\n            </div>\n            \n                <div fxLayout=\"column\">\n                    <h4 style=\"margin-bottom: 1px;\">Course Details</h4>\n                    <mat-form-field appearance=\"outline\" color=\"accent\">\n                        <mat-label>Add details</mat-label>\n                        <textarea formControlName=\"course_details\" matInput></textarea>\n                      </mat-form-field>\n                   </div>\n        </form>\n       \n    <app-bottom></app-bottom>\n        \n    </div>\n    <div  fxFlex=\"0\" fxFlex.gt-md=\"50\" style=\"background-image: url('../../assets/bg_2.png');height: 100%;width: 100%;background-color: #F5F6FA;background-position: center;background-repeat: no-repeat;background-size: cover;\">\n \n    </div>\n </div>\n \n ");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"main\" fxLayout=\"row\">\n    <div style=\"width: 100%;height: 100%;\" fxFlex=\"100\" fxFlex.gt-md=\"50\">\n        <form [formGroup]=\"detailedForm\" (ngSubmit)=\"formSubmit()\" class=\"main1\" fxLayout=\"column\" fxLayoutGap=\"10px\">\n            <div>\n                <h1 >Add Course Details</h1>\n                <mat-divider></mat-divider>\n            </div>\n            <h4  style=\"margin-top: 6px;margin-bottom: 0px;\">COURSE </h4>\n            <div fxLayout=\"column\" fxLayoutGap=\"0px\" >\n                <h5 [ngClass]=\"{'alert': !detailedForm.get('course_name').valid && verify}\" style=\"margin: 0px;font-size: 12px;\"> Course Name</h5>\n                <div style=\"font-size: 1px;\">\n                  <mat-form-field  appearance=\"outline\" style=\"font-size: small;margin: 0px;width: 100%;\">\n                    <input formControlName=\"course_name\" style=\"border-top: 0px;\" matInput placeholder=\"Add course name\">\n                 </mat-form-field>\n                </div>\n            </div>\n            <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n                <h5 [ngClass]=\"{'alert': !detailedForm.get('aircraft_type').valid && verify}\" style=\"margin: 0px;font-size: 12px;\"> Aircraft Type </h5>\n                <mat-radio-group formControlName=\"aircraft_type\" aria-label=\"Select an option\" fxLayoutGap=\"20px\"> \n                    <mat-radio-button value=\"multi_rotar\"> Multi Rotar </mat-radio-button>\n                    <mat-radio-button value=\"fixed_wing\"> Fixed Wing </mat-radio-button>\n                  </mat-radio-group>\n            </div>\n            <router-outlet name=\"expand\"></router-outlet>\n            <div fxLayout fxLayoutAlign=\"start center\" style=\"height: 30px;cursor: pointer;\" (click)=\"add_batch()\">\n                <mat-icon color=\"accent\">add_circle</mat-icon>\n                <h6 style=\"color: rgb(62, 179, 7);font-size: 10px;\"  >ADD ANOTHER COURSE DATE</h6>\n            </div>\n            \n                <div fxLayout=\"column\">\n                    <h4 [ngClass]=\"{'alert': !detailedForm.get('course_details').valid && verify}\" style=\"margin-bottom: 1px;\">Course Details</h4>\n                    <mat-form-field appearance=\"outline\" color=\"accent\">\n                        <mat-label>Add details</mat-label>\n                        <textarea formControlName=\"course_details\" matInput></textarea>\n                      </mat-form-field>\n                   </div>\n        </form>\n       \n    <app-bottom></app-bottom>\n        \n    </div>\n    <div  fxFlex=\"0\" fxFlex.gt-md=\"50\" style=\"background-image: url('../../assets/bg_2.png');height: 100%;width: 100%;background-color: #F5F6FA;background-position: center;background-repeat: no-repeat;background-size: cover;\">\n \n    </div>\n </div>\n \n ");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [formGroup]=\"form\" *ngFor=\"let form of expandFormArr;let i = index\">            \n    <mat-accordion>\n        <mat-expansion-panel hideToggle>\n           <mat-expansion-panel-header #panelH (click)=\"panelH._toggle()\">\n            <mat-panel-title fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n                <div fxLayout=\"row\" fxLayoutGap=\"15px\">\n                    <h5 [ngClass]=\"{'alert': ccost || ccity}\" style=\"margin: 0px;font-size: 11px;\"> {{ \"BATCH\" + (i+1) }}</h5>\n                    <h5 style=\"margin: 0px;font-size: 11px;\"> START DATE </h5>\n                    <h5 style=\"margin: 0px;font-size: 11px;\"> END DATE </h5>\n                </div>\n                <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\n                    <div>\n                        <button mat-icon-button [matMenuTriggerFor]=\"menu\" aria-label=\"Example icon-button with a menu\">\n                            <mat-icon>more_vert</mat-icon>\n                          </button>\n                          <mat-menu #menu=\"matMenu\">\n                            <button (click)=\"delete(i)\" mat-menu-item>\n                                <mat-icon color=\"warn\">delete</mat-icon>\n                              <span>Delete</span>\n                            </button>\n                            <button (click)=\"reset(i)\" mat-menu-item >\n                                <mat-icon color=\"accent\">rotate_right</mat-icon>\n                              <span>Reset</span>\n                            </button>\n                          </mat-menu>\n                    </div>\n                    <mat-icon color=\"accent\" matDatepickerToggleIcon (click)=\"panelH._toggle()\">keyboard_arrow_down</mat-icon>\n                </div>                \n            </mat-panel-title>\n          </mat-expansion-panel-header>\n          <div >\n               <div fxLayout=\"row\" fxLayoutAlign=\"start center\"  >\n                 <div fxFlex=\"13\"></div>\n                <div fxLayout=\"column\">\n                  <h4 [ngClass]=\"{'alert': ccost}\" style=\"font-size: 12px;margin: 0px;\">Course Cost(Ex GST)</h4>\n                  <mat-form-field  class=\"matSize\" color=\"accent\"  appearance=\"outline\" >\n                      <input formControlName=\"cost\" matInput placeholder=\"Rs.\">\n                   </mat-form-field>\n                   \n                 </div>\n               </div>\n               <div fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"center center\" fxLayoutGap=\"10px\">\n                <div fxFlex=\"8\"></div>\n                <div>\n                    <h4  style=\"font-size: 12px;margin: 0px;\">Course Languages</h4>\n                    <mat-form-field class=\"matSize\"  appearance=\"outline\" color=\"accent\">\n                      \n                      <mat-select formControlName=\"lng\" placeholder=\"select languages\" multiple>\n                        <mat-option *ngFor=\"let language of lngs\" [value]=\"language\">{{language}}</mat-option>\n                      </mat-select>\n                    </mat-form-field>\n                  </div>\n                  <div fxLayout=\"column\" >\n                    <h4 [ngClass]=\"{'alert': ccity}\" style=\"font-size: 12px;margin: 0px;\">Course Location</h4>\n                  <mat-form-field class=\"matSize\"   appearance=\"outline\" color=\"accent\">\n                   \n                    <mat-select formControlName=\"city\" placeholder=\"select city\">\n                      <mat-option  *ngFor=\"let city of cits\" [value]=\"city\">\n                        {{city}}\n                      </mat-option>\n                    </mat-select>\n                  </mat-form-field>\n                 \n                   </div>\n\n               </div>\n               <div fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"start center\" fxLayoutGap=\"20px\">\n                   <div>\n                       <p>is this a weekend course</p>\n                   </div>\n                   <div>\n                    <mat-radio-group formControlName=\"weekend\" aria-label=\"Select an option\" fxLayoutGap=\"20px\"> \n                        <mat-radio-button value=\"yes\"> YES </mat-radio-button>\n                        <mat-radio-button value=\"no\"> NO </mat-radio-button>\n                      </mat-radio-group>\n                   </div>\n               </div>\n          </div>\n        </mat-expansion-panel>\n    </mat-accordion>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [formGroup]=\"form\" *ngFor=\"let form of expandFormArr;let i = index\">            \n    <mat-accordion>\n        <mat-expansion-panel hideToggle>\n           <mat-expansion-panel-header #panelH (click)=\"panelH._toggle()\">\n            <mat-panel-title fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n                <div fxLayout=\"row\" fxLayoutGap=\"15px\">\n                    <h5 [ngClass]=\"{'alert': (!expandFormArr[i].get('cost').valid  || !expandFormArr[i].get('city').valid) && verify}\" style=\"margin: 0px;font-size: 11px;\"> {{ \"BATCH\" + (i+1) }}</h5>\n                    <h5 style=\"margin: 0px;font-size: 11px;\"> START DATE </h5>\n                    <h5 style=\"margin: 0px;font-size: 11px;\"> END DATE </h5>\n                </div>\n                <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\n                    <div>\n                        <button mat-icon-button [matMenuTriggerFor]=\"menu\" aria-label=\"Example icon-button with a menu\">\n                            <mat-icon>more_vert</mat-icon>\n                          </button>\n                          <mat-menu #menu=\"matMenu\">\n                            <button (click)=\"delete(i)\" mat-menu-item>\n                                <mat-icon color=\"warn\">delete</mat-icon>\n                              <span>Delete</span>\n                            </button>\n                            <button (click)=\"reset(i)\" mat-menu-item >\n                                <mat-icon color=\"accent\">rotate_right</mat-icon>\n                              <span>Reset</span>\n                            </button>\n                          </mat-menu>\n                    </div>\n                    <mat-icon color=\"accent\" matDatepickerToggleIcon (click)=\"panelH._toggle()\">keyboard_arrow_down</mat-icon>\n                </div>                \n            </mat-panel-title>\n          </mat-expansion-panel-header>\n          <div >\n               <div fxLayout=\"row\" fxLayoutAlign=\"start center\"  >\n                 <div fxFlex=\"13\"></div>\n                <div fxLayout=\"column\">\n                  <h4 [ngClass]=\"{'alert': !expandFormArr[i].get('cost').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Cost(Ex GST)</h4>\n                  <mat-form-field  class=\"matSize\" color=\"accent\"  appearance=\"outline\" >\n                      <input formControlName=\"cost\" matInput placeholder=\"Rs.\">\n                   </mat-form-field>\n                   \n                 </div>\n               </div>\n               <div fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"center center\" fxLayoutGap=\"10px\">\n                <div fxFlex=\"8\"></div>\n                <div>\n                    <h4 [ngClass]=\"{'alert': !expandFormArr[i].get('lng').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Languages</h4>\n                    <mat-form-field class=\"matSize\"  appearance=\"outline\" color=\"accent\">\n                      \n                      <mat-select formControlName=\"lng\" placeholder=\"select languages\" multiple>\n                        <mat-option *ngFor=\"let language of lngs\" [value]=\"language\">{{language}}</mat-option>\n                      </mat-select>\n                    </mat-form-field>\n                  </div>\n                  <div fxLayout=\"column\" >\n                    <h4 [ngClass]=\"{'alert':!expandFormArr[i].get('city').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Location</h4>\n                  <mat-form-field class=\"matSize\"   appearance=\"outline\" color=\"accent\">\n                   \n                    <mat-select formControlName=\"city\" placeholder=\"select city\">\n                      <mat-option  *ngFor=\"let city of cits\" [value]=\"city\">\n                        {{city}}\n                      </mat-option>\n                    </mat-select>\n                  </mat-form-field>\n                 \n                   </div>\n\n               </div>\n               <div fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"start center\" fxLayoutGap=\"20px\">\n                   <div>\n                       <p [ngClass]=\"{'alert': !expandFormArr[i].get('weekend').valid && verify}\">is this a weekend course</p>\n                   </div>\n                   <div>\n                    <mat-radio-group formControlName=\"weekend\" aria-label=\"Select an option\" fxLayoutGap=\"20px\"> \n                        <mat-radio-button value=\"yes\"> YES </mat-radio-button>\n                        <mat-radio-button value=\"no\"> NO </mat-radio-button>\n                      </mat-radio-group>\n                   </div>\n               </div>\n          </div>\n        </mat-expansion-panel>\n    </mat-accordion>\n</div>");
 
 /***/ }),
 
@@ -574,7 +574,7 @@ let BottomComponent = class BottomComponent {
         //this.active.snapshot._routerState._root.value.children[0].component.name === "CourseComponent" ? this.sb=true:this.sb=false;
     }
     verify() {
-        this.data.formVerification();
+        this.data.verifyOnEmitter.next(true);
     }
 };
 BottomComponent.ctorParameters = () => [
@@ -628,16 +628,13 @@ let CourseComponent = class CourseComponent {
     }
     ngOnInit() {
         this.detailedForm = this.data.detailsForm;
-        this.data.verifyEmitter.subscribe((req) => {
-            console.log(req);
-            this.cname = !req[0];
-            this.ctype = !req[1];
+        this.data.verifyOnEmitter.subscribe((req) => {
+            this.verify = true;
         });
-    }
-    formSubmit() {
     }
     add_batch() {
         this.data.add_batch();
+        this.data.verifyOffEmitter.next(false);
     }
 };
 CourseComponent.ctorParameters = () => [
@@ -692,15 +689,17 @@ let ExpandableComponent = class ExpandableComponent {
         this.expandFormArr = [];
     }
     ngOnInit() {
+        this.verify = false;
         this.cits = this.data.cities;
         this.lngs = this.data.languages;
         this.expandForm = this.data.expansionForm;
         this.expandFormArr = this.data.expansionFormArr;
-        this.data.verifyEmitter.subscribe(req => {
-            this.ccost = !req[2];
-            this.ccity = !req[3];
-            if (!req[2] || !req[3])
-                this.setColor = true;
+        console.log(this.expandFormArr);
+        this.data.verifyOnEmitter.subscribe(req => {
+            this.verify = true;
+        });
+        this.data.verifyOffEmitter.subscribe(req => {
+            this.verify = false;
         });
     }
     delete(i) {
@@ -754,7 +753,8 @@ let DataStorageService = class DataStorageService {
         this.items = [[], [], []];
         this.j = 0;
         this.requiredEmitter = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
-        this.verifyEmitter = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+        this.verifyOnEmitter = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+        this.verifyOffEmitter = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.componentEmitter = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.ac.events.subscribe(e => {
             if (e instanceof _angular_router__WEBPACK_IMPORTED_MODULE_4__["NavigationStart"]) {
@@ -797,13 +797,6 @@ let DataStorageService = class DataStorageService {
     upload(i) {
         this.items[i].push("file" + this.j + ".pdf");
         this.j = this.j + 1;
-    }
-    formVerification() {
-        this.detailsForm.get('course_name').valid ? this.name = true : this.name = false;
-        this.detailsForm.get('aircraft_type').valid ? this.air = true : this.air = false;
-        this.expansionForm.get('cost').valid ? this.cst = true : this.cst = false;
-        this.expansionForm.get('city').valid ? this.cty = true : this.cty = false;
-        this.verifyEmitter.next([this.name, this.air, this.cst, this.cty]);
     }
 };
 DataStorageService.ctorParameters = () => [
