@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\" fxLayoutGap=\"30px\" fxLayoutGap.lt-md=\"20px\" fxLayoutGap.lt-sm=\"10px\">\n   <div *ngFor=\"let category of categories;let i=index;\" fxLayout=\"column\" >\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n          <div fxLayout=\"row\" fxLayoutGap=\"10px\" style=\"height: 30px;\">\n             <h5>{{category}}</h5>\n             <h5 *ngIf=\"i!==2\" style=\"font-size: 12px;font-weight: 100;\">(Optional)</h5>\n             <h5 *ngIf=\"i==2\" [ngClass]=\"{'alert': compulsory}\"  style=\"font-size: 12px;font-weight: 100;\">(Required)</h5>\n          </div>\n          <div>\n                <button (click)=\"upload(i)\" mat-button style=\"color: #147DF6;font-size: 12px;\">UPLOAD</button>\n          </div>\n      </div>\n      <mat-divider></mat-divider><div style=\"padding: 8px;color: red;\" *ngIf=\"compulsory && i===2\">this is Required</div>\n      <mat-list  fxLayout=\"column\" >\n         <div  *ngFor=\"let item of itemsArr[i];let in=index\" >\n            <div fxLayout >\n              <mat-list-item > {{item}} </mat-list-item>\n              <mat-icon (click)=\"delete(i,in)\" color=\"warn\">delete</mat-icon>\n            </div>\n           \n           <mat-divider></mat-divider>\n         </div>\n       \n     </mat-list>\n  </div>\n  \n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div fxLayout=\"column\" fxLayoutGap=\"30px\" fxLayoutGap.lt-md=\"20px\" fxLayoutGap.lt-sm=\"10px\">\n   <div *ngFor=\"let category of categories;let i=index;\" fxLayout=\"column\" >\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n          <div fxLayout=\"row\" fxLayoutGap=\"10px\" style=\"height: 30px;\">\n             <h5>{{category}}</h5>\n             <h5 *ngIf=\"i!==2\" style=\"font-size: 12px;font-weight: 100;\">(Optional)</h5>\n             <h5 *ngIf=\"i==2\" [ngClass]=\"{'alert': compulsory}\"  style=\"font-size: 12px;font-weight: 100;\">(Required)</h5>\n          </div>\n          <div>\n            <button mat-button color=\"primary\" (click)=\"fileInput.click()\">  \n               <span>UPLOAD</span>\n               <input #fileInput type=\"file\" (change)=\"onFile($event,i)\" style=\"display:none;\" />\n             </button>\n          </div>\n      </div>\n      <mat-divider></mat-divider><div style=\"padding: 8px;color: red;\" *ngIf=\"compulsory && i===2\">this is Required</div>\n      <mat-list  fxLayout=\"column\" >\n         <div  *ngFor=\"let item of itemsArr[i];let in=index\" >\n            <div fxLayout >\n              <mat-list-item > {{item}} </mat-list-item>\n              <mat-icon (click)=\"delete(i,in)\" color=\"warn\">delete</mat-icon>\n            </div>\n           \n           <mat-divider></mat-divider>\n         </div>\n       \n     </mat-list>\n  </div>\n  \n</div>\n");
 
 /***/ }),
 
@@ -794,9 +794,8 @@ let DataStorageService = class DataStorageService {
     deleteFile(i, j) {
         this.items[i].splice(j, 1);
     }
-    upload(i) {
-        this.items[i].push("file" + this.j + ".pdf");
-        this.j = this.j + 1;
+    upload(filename, i) {
+        this.items[i].push(filename);
     }
 };
 DataStorageService.ctorParameters = () => [
@@ -908,9 +907,10 @@ let MainUploadComponent = class MainUploadComponent {
             this.compulsory = comp;
         });
     }
-    upload(i) {
-        this.data.upload(i);
+    onFile(event, i) {
         this.compulsory = false;
+        this.fileName = event.target.files[0].name;
+        this.data.upload(this.fileName, i);
     }
     delete(i, j) {
         this.data.deleteFile(i, j);
