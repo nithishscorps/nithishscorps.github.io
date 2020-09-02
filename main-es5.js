@@ -1,8 +1,8 @@
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
   /***/
@@ -111,7 +111,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div fxLayout=\"column\" fxLayoutGap=\"10px\">\n\n  <div [formGroup]=\"form\" *ngFor=\"let form of expandFormArr;let i = index\">            \n    <mat-accordion>\n        <mat-expansion-panel hideToggle>\n           <mat-expansion-panel-header #panelH (click)=\"panelH._toggle()\">\n            <mat-panel-title fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n                <div fxLayout=\"row\" fxLayoutGap=\"0px\">\n                    <h4 [ngClass]=\"{'alert': (!expandFormArr[i].get('cost').valid  || !expandFormArr[i].get('city').valid) && verify}\" style=\"margin: 0px;\"> {{ \"BATCH\" + (i+1) }}</h4>\n                    <div class=\"dates\" fxLayout fxLayoutGap=\"5px\">\n                      <div fxFlex=\"8\"></div>\n                      <div class=\"date\" fxLayout=\"row\" fxLayout.lt-sm=\"column\" fxLayoutAlign.gt-xs=\"center center\">        \n                        <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                        <mat-datepicker #picker></mat-datepicker>\n                        <input matInput [matDatepicker]=\"picker\" placeholder=\"START DAY\">\n                       </div>\n                       <div class=\"date\" fxLayout=\"row\" fxLayout.lt-sm=\"column\"  fxLayoutAlign.gt-xs=\"center center\">        \n                        <mat-datepicker-toggle matSuffix [for]=\"piker\"></mat-datepicker-toggle>\n                        <mat-datepicker #piker></mat-datepicker>\n                        <input matInput [matDatepicker]=\"piker\" placeholder=\"END DAY\">\n                       </div>\n                    </div>\n\n                   \n                </div>\n                <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\n                    <div>\n                        <button mat-icon-button [matMenuTriggerFor]=\"menu\" aria-label=\"Example icon-button with a menu\">\n                            <mat-icon>more_vert</mat-icon>\n                          </button>\n                          <mat-menu #menu=\"matMenu\">\n                            <button (click)=\"delete(i)\" mat-menu-item>\n                                <mat-icon color=\"warn\">delete</mat-icon>\n                              <span>Delete</span>\n                            </button>\n                            <button (click)=\"reset(i)\" mat-menu-item >\n                                <mat-icon color=\"accent\">rotate_right</mat-icon>\n                              <span>Reset</span>\n                            </button>\n                          </mat-menu>\n                    </div>\n                    <mat-icon color=\"accent\" matDatepickerToggleIcon (click)=\"panelH._toggle()\">keyboard_arrow_down</mat-icon>\n                </div>                \n            </mat-panel-title>\n          </mat-expansion-panel-header>\n          <div >\n               <div fxLayout=\"row\" fxLayoutAlign=\"start center\" fxLayoutAlign.lt-md=\"center center\" >\n                 \n                <div fxLayout=\"column\">\n                  <h4 [ngClass]=\"{'alert': !expandFormArr[i].get('cost').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Cost(Ex GST)</h4>\n                  <mat-form-field  class=\"matSize\" color=\"accent\"  appearance=\"outline\" >\n                      <input formControlName=\"cost\" matInput placeholder=\"Rs.\">\n                   </mat-form-field>\n                   \n                 </div>\n               </div>\n               <div fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"start center\" fxLayoutGap=\"10px\">\n                \n                <div>\n                    <h4 [ngClass]=\"{'alert': !expandFormArr[i].get('lng').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Languages</h4>\n                    <mat-form-field class=\"matSize\"  appearance=\"outline\" color=\"accent\">\n                      \n                      <mat-select formControlName=\"lng\" placeholder=\"select languages\" multiple>\n                        <mat-option *ngFor=\"let language of lngs\" [value]=\"language\">{{language}}</mat-option>\n                      </mat-select>\n                    </mat-form-field>\n                  </div>\n                  <div fxLayout=\"column\" >\n                    <h4 [ngClass]=\"{'alert':!expandFormArr[i].get('city').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Location</h4>\n                  <mat-form-field class=\"matSize\"   appearance=\"outline\" color=\"accent\">\n                   \n                    <mat-select formControlName=\"city\" placeholder=\"select city\">\n                      <mat-option  *ngFor=\"let city of cits\" [value]=\"city\">\n                        {{city}}\n                      </mat-option>\n                    </mat-select>\n                  </mat-form-field>\n                 \n                   </div>\n\n               </div>\n               <div fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"start center\" fxLayoutGap=\"20px\">\n                   <div>\n                       <p [ngClass]=\"{'alert': !expandFormArr[i].get('weekend').valid && verify}\">is this a weekend course</p>\n                   </div>\n                   <div>\n                    <mat-radio-group formControlName=\"weekend\" aria-label=\"Select an option\" fxLayoutGap=\"20px\"> \n                        <mat-radio-button value=\"yes\"> YES </mat-radio-button>\n                        <mat-radio-button value=\"no\"> NO </mat-radio-button>\n                      </mat-radio-group>\n                   </div>\n               </div>\n          </div>\n        </mat-expansion-panel>\n    </mat-accordion>\n  </div> \n</div>\n\n";
+    __webpack_exports__["default"] = "<div fxLayout=\"column\" fxLayoutGap=\"10px\">\n\n  <div [formGroup]=\"form\" *ngFor=\"let form of expandFormArr;let i = index\">            \n    <mat-accordion>\n        <mat-expansion-panel hideToggle>\n           <mat-expansion-panel-header #panelH (click)=\"panelH._toggle()\">\n            <mat-panel-title fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n                <div fxLayout=\"row\" fxLayoutGap=\"0px\">\n                    <h4 [ngClass]=\"{'alert': (!expandFormArr[i].get('cost').valid  || !expandFormArr[i].get('city').valid) && verify}\" style=\"margin: 0px;\"> {{ \"BATCH\" + (i+1) }}</h4>\n                    <div class=\"dates\" fxLayout fxLayoutGap=\"5px\">\n                      <div fxFlex=\"8\"></div>\n                      <div class=\"date\" fxLayout=\"row\" fxLayout.lt-sm=\"column\" fxLayoutAlign.gt-xs=\"center center\">        \n                        <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                        <mat-datepicker #picker></mat-datepicker>\n                        <input matInput [matDatepicker]=\"picker\" formControlName=\"sDate\" placeholder=\"START DAY\">\n                       </div>\n                       <div class=\"date\" fxLayout=\"row\" fxLayout.lt-sm=\"column\"  fxLayoutAlign.gt-xs=\"center center\">        \n                        <mat-datepicker-toggle matSuffix [for]=\"piker\"></mat-datepicker-toggle>\n                        <mat-datepicker #piker></mat-datepicker>\n                        <input matInput [matDatepicker]=\"piker\" formControlName=\"eDate\" placeholder=\"END DAY\">\n                       </div>\n                    </div>\n\n                   \n                </div>\n                <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\n                    <div>\n                        <button mat-icon-button [matMenuTriggerFor]=\"menu\" aria-label=\"Example icon-button with a menu\">\n                            <mat-icon>more_vert</mat-icon>\n                          </button>\n                          <mat-menu #menu=\"matMenu\">\n                            <button (click)=\"delete(i)\" mat-menu-item>\n                                <mat-icon color=\"warn\">delete</mat-icon>\n                              <span>Delete</span>\n                            </button>\n                            <button (click)=\"reset(i)\" mat-menu-item >\n                                <mat-icon color=\"accent\">rotate_right</mat-icon>\n                              <span>Reset</span>\n                            </button>\n                          </mat-menu>\n                    </div>\n                    <mat-icon color=\"accent\" matDatepickerToggleIcon (click)=\"panelH._toggle()\">keyboard_arrow_down</mat-icon>\n                </div>                \n            </mat-panel-title>\n          </mat-expansion-panel-header>\n          <div >\n               <div fxLayout=\"row\" fxLayoutAlign=\"start center\" fxLayoutAlign.lt-md=\"center center\" >\n                 \n                <div fxLayout=\"column\">\n                  <h4 [ngClass]=\"{'alert': !expandFormArr[i].get('cost').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Cost(Ex GST)</h4>\n                  <mat-form-field  class=\"matSize\" color=\"accent\"  appearance=\"outline\" >\n                      <input formControlName=\"cost\" matInput placeholder=\"Rs.\">\n                   </mat-form-field>\n                   \n                 </div>\n               </div>\n               <div fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"start center\" fxLayoutGap=\"10px\">\n                \n                <div>\n                    <h4 [ngClass]=\"{'alert': !expandFormArr[i].get('lng').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Languages</h4>\n                    <mat-form-field class=\"matSize\"  appearance=\"outline\" color=\"accent\">\n                      \n                      <mat-select formControlName=\"lng\" placeholder=\"select languages\" multiple>\n                        <mat-option *ngFor=\"let language of lngs\" [value]=\"language\">{{language}}</mat-option>\n                      </mat-select>\n                    </mat-form-field>\n                  </div>\n                  <div fxLayout=\"column\" >\n                    <h4 [ngClass]=\"{'alert':!expandFormArr[i].get('city').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Location</h4>\n                  <mat-form-field class=\"matSize\"   appearance=\"outline\" color=\"accent\">\n                   \n                    <mat-select formControlName=\"city\" placeholder=\"select city\">\n                      <mat-option  *ngFor=\"let city of cits\" [value]=\"city\">\n                        {{city}}\n                      </mat-option>\n                    </mat-select>\n                  </mat-form-field>\n                 \n                   </div>\n\n               </div>\n               <div fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"start center\" fxLayoutGap=\"20px\">\n                   <div>\n                       <p [ngClass]=\"{'alert': !expandFormArr[i].get('weekend').valid && verify}\">is this a weekend course</p>\n                   </div>\n                   <div>\n                    <mat-radio-group formControlName=\"weekend\" aria-label=\"Select an option\" fxLayoutGap=\"20px\"> \n                        <mat-radio-button value=\"yes\"> YES </mat-radio-button>\n                        <mat-radio-button value=\"no\"> NO </mat-radio-button>\n                      </mat-radio-group>\n                   </div>\n               </div>\n          </div>\n        </mat-expansion-panel>\n    </mat-accordion>\n  </div> \n</div>\n\n";
     /***/
   },
 
@@ -171,7 +171,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"main\" fxLayout=\"row\">\n   <div  fxFlex=\"100\" fxFlex.gt-md=\"50\" >\n       <div class=\"main1\">\n        <div style=\"margin-top: 0px;\" fxLayout=\"column\">\n            <h1  style=\"margin: 0px;text-align: center;\">Add some details of your training institute</h1>\n           <div fxLayout=\"column\">\n               <h5>INSTITUTE LOGO</h5>\n               <div fxLayout>\n                 <img src=\"../../assets/ic_logoiid.png\">\n                 <button mat-button color=\"accent\">CHANGE</button>\n               </div>\n           </div>\n           <div fxLayout=\"column\" fxLayoutGap=\"1px\" >\n                <h5> NAME OF THE INSTITUTE</h5>\n                <mat-form-field style=\"width: 100%;border: 0px;padding: 0px;\" appearance=\"outline\" >\n                   <input style=\"border-top: 0px;\" matInput placeholder=\"Name of the institute\">\n                </mat-form-field>\n           </div>\n           <div>\n              <router-outlet name=\"uploads\"></router-outlet>\n           </div>\n           \n        </div> \n       </div>\n\n       <div class=\"bottom\">\n         <button  (click)=\"next()\" style=\"color: white;height: 30px;\" color=\"accent\" mat-raised-button>NEXT</button>\n       </div>\n         \n      \n      \n    \n   </div>\n   <div fxFlex=\"0\" fxFlex.gt-md=\"50\" style=\"background-image: url('../../assets/bg_1.png');height: 100%;width: 100%;background-color: #F5F6FA;\">\n\n   </div>\n   \n</div>\n\n";
+    __webpack_exports__["default"] = "<div class=\"main\" fxLayout=\"row\">\n   <div  fxFlex=\"100\" fxFlex.gt-md=\"50\" >\n       <div class=\"main1\">\n        <div style=\"margin-top: 0px;\" fxLayout=\"column\">\n            <h1  style=\"margin: 0px;text-align: center;\">Add some details of your training institute</h1>\n           <div fxLayout=\"column\">\n               <h5>INSTITUTE LOGO</h5>\n               <div fxLayout>\n                 <img src=\"../../assets/ic_logoiid.png\">\n                 <button mat-button color=\"accent\">CHANGE</button>\n               </div>\n           </div>\n           <div fxLayout=\"column\" fxLayoutGap=\"1px\" >\n                <h5> NAME OF THE INSTITUTE</h5>\n                <mat-form-field style=\"width: 100%;border: 0px;padding: 0px;\" appearance=\"outline\" >\n                   <input style=\"border-top: 0px;\" matInput placeholder=\"Name of the institute\">\n                </mat-form-field>\n           </div>\n           <div>\n              <router-outlet name=\"uploads\"></router-outlet>\n           </div>\n           \n        </div> \n       </div>\n\n       <div class=\"bottom\">\n         <button  (click)=\"next($event)\" style=\"color: white;height: 30px;\" color=\"accent\" mat-raised-button>NEXT</button>\n       </div>\n         \n      \n      \n    \n   </div>\n   <div fxFlex=\"0\" fxFlex.gt-sm=\"50\" style=\"background-image: url('../../assets/bg_1.png');height: 100%;width: 100%;background-color: #F5F6FA;background-position: center;background-repeat: no-repeat;background-size: cover;\">\n\n   </div>\n   \n</div>\n\n";
     /***/
   },
 
@@ -831,11 +831,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
 
-    var AppComponent = function AppComponent() {
-      _classCallCheck(this, AppComponent);
+    var AppComponent = /*#__PURE__*/function () {
+      function AppComponent() {
+        _classCallCheck(this, AppComponent);
 
-      this.title = 'tropoGo';
-    };
+        this.title = 'tropoGo';
+      }
+
+      _createClass(AppComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          console.log("app component");
+        }
+      }]);
+
+      return AppComponent;
+    }();
 
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-root',
@@ -1145,6 +1156,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this = this;
 
+          console.log("bottom");
           this.sb = false;
           this.data.componentEmitter.subscribe(function (comp) {
             comp === "upload" ? _this.sb = false : _this.sb = true;
@@ -1251,6 +1263,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this2 = this;
 
+          console.log("form page");
           this.detailedForm = this.data.detailsForm;
           this.data.verifyOnEmitter.subscribe(function (req) {
             _this2.verify = true;
@@ -1344,6 +1357,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./src/app/service/data-storage.service.ts");
 
     var ExpandableComponent = /*#__PURE__*/function () {
+      //@ViewChild('poke',{static:true})poke:ElementRef;
       function ExpandableComponent(data) {
         _classCallCheck(this, ExpandableComponent);
 
@@ -1358,6 +1372,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this3 = this;
 
+          console.log("expand");
           this.verify = false;
           this.cits = this.data.cities;
           this.lngs = this.data.languages;
@@ -1470,12 +1485,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.verifyOnEmitter = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.verifyOffEmitter = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.componentEmitter = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+        console.log("data storage service");
         this.ac.events.subscribe(function (e) {
           if (e instanceof _angular_router__WEBPACK_IMPORTED_MODULE_4__["NavigationStart"]) {
+            console.log(e);
             e.url === "/mainLoad" || e.url === "/" ? _this4.componentEmitter.next("upload") : _this4.componentEmitter.next("form");
           }
         });
         this.expansionForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+          sDate: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+          eDate: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
           city: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
           lng: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
           cost: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
@@ -1493,10 +1512,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "add_batch",
         value: function add_batch() {
           this.expansionFormArr.push(new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+            sDate: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+            eDate: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
             city: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
             lng: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
             cost: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            weekend: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]()
+            weekend: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required)
           }));
           console.log(this.expansionFormArr);
           console.log(this.detailsForm);
@@ -1609,8 +1630,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this5 = this;
 
+          console.log("top");
           this.data.componentEmitter.subscribe(function (comp) {
             comp === "upload" ? _this5.load = 40 : _this5.load = 80;
+            console.log(_this5.load);
           });
         }
       }]);
@@ -1708,6 +1731,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this6 = this;
 
+          console.log("main upload");
           this.itemsArr = this.data.items;
           this.data.requiredEmitter.subscribe(function (comp) {
             _this6.compulsory = comp;
@@ -1824,12 +1848,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       _createClass(UploadComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          console.log("upload");
+        }
       }, {
         key: "next",
-        value: function next() {
+        value: function next(event) {
           if (this.data.items[this.data.items.length - 2].length > 0) {
             this.router.navigate(['/formPage']);
+            console.log(event);
           } else {
             this.data.requiredEmitter.next(true);
           }
