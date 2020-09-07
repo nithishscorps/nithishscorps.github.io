@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { DataStorageService } from 'src/app/service/data-storage.service';
+import { DataStorageService } from 'src/app/common/services/data-storage.service';
 
 @Component({
   selector: 'app-expandable',
@@ -17,20 +17,25 @@ export class ExpandableComponent implements OnInit {
   ccost: any;
   ccity: any;
   setColor: boolean;
-
+  verify:boolean;
+  //@ViewChild('poke',{static:true})poke:ElementRef;
+ 
   constructor(private data:DataStorageService) { }
 
   ngOnInit() {
-
+    console.log("expand");
+    this.verify=false;
     this.cits = this.data.cities;
     this.lngs = this.data.languages;
     this.expandForm = this.data.expansionForm;
     this.expandFormArr = this.data.expansionFormArr;
-    this.data.verifyEmitter.subscribe(req => {
-         this.ccost=!req[2];
-         this.ccity=!req[3];
-         if(!req[2] || !req[3])this.setColor=true;
+    console.log(this.expandFormArr);
+    this.data.verifyOnEmitter.subscribe(req => {
+        this.verify=true;
     });
+    this.data.verifyOffEmitter.subscribe(req => {
+      this.verify=false;
+  });
   
   }
 
