@@ -1,8 +1,8 @@
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
   /***/
@@ -56,26 +56,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/common/components/bottom/bottom.component.html":
-  /*!******************************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/common/components/bottom/bottom.component.html ***!
-    \******************************************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppCommonComponentsBottomBottomComponentHtml(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "<div class=\"bottom\" fxLayout=\"row\" fxLayoutGap=\"30px\" fxLayoutAlign=\"center center\" fxLayoutAlign.lt-md=\"center center\"> \n    <button *ngIf=\"sb\" routerLink=\"/mainLoad\"   style=\"color: white;height: 30px;\" color=\"accent\" mat-raised-button>BACK</button> \n    <button *ngIf=\"sb\" (click)=\"verify()\" style=\"color: white;height: 30px;\" color=\"accent\" mat-raised-button>SAVE & PUBLISH</button> \n    <button *ngIf=\"!sb\" (click)=\"next()\" style=\"color: white;height: 30px;\" color=\"accent\" mat-raised-button>NEXT</button> \n    <mat-spinner *ngIf=\"spin\" diameter=\"20\" color=\"accent\"></mat-spinner>\n</div>";
-    /***/
-  },
-
-  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/common/components/toolbar/toolbar.component.html":
   /*!********************************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/common/components/toolbar/toolbar.component.html ***!
@@ -96,46 +76,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/course/course.component.html":
-  /*!************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/course/course.component.html ***!
-    \************************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppCourseCourseComponentHtml(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "<div class=\"main\" fxLayout=\"row\">\n    <div style=\"width: 100%;height: 100%;\" fxFlex=\"100\" fxFlex.gt-md=\"50\">\n        <form [formGroup]=\"detailedForm\"  class=\"main1\" fxLayout=\"column\" fxLayoutGap=\"10px\">\n            <div>\n                <h1 >Add Course Details</h1>\n                <mat-divider></mat-divider>\n            </div>\n            <h4  style=\"margin-top: 6px;margin-bottom: 0px;\">COURSE </h4>\n            <div fxLayout=\"column\"  >\n                <h5 [ngClass]=\"{'alert': !detailedForm.get('course_name').valid && verify}\" style=\"margin: 0px;font-size: 12px;\"> Course Name</h5>\n                <div >\n                  <mat-form-field  appearance=\"outline\" style=\"margin: 0px;width: 100%;\">\n                    <input formControlName=\"course_name\" style=\"border-top: 0px;\" matInput placeholder=\"Add course name\">\n                 </mat-form-field>\n                </div>\n            </div>\n            <div fxLayout=\"column\" fxLayoutGap=\"10px\">\n                <h5 [ngClass]=\"{'alert': !detailedForm.get('aircraft_type').valid && verify}\" style=\"margin: 0px;font-size: 12px;\"> Aircraft Type </h5>\n                <mat-radio-group formControlName=\"aircraft_type\" aria-label=\"Select an option\" fxLayoutGap=\"20px\"> \n                    <mat-radio-button value=\"multi_rotar\"> Multi Rotar </mat-radio-button>\n                    <mat-radio-button value=\"fixed_wing\"> Fixed Wing </mat-radio-button>\n                  </mat-radio-group>\n            </div>\n            <router-outlet name=\"expand\"></router-outlet>\n            <div fxLayout fxLayoutAlign=\"start center\" style=\"height: 30px;cursor: pointer;\" (click)=\"add_batch()\">\n                <mat-icon color=\"accent\">add_circle</mat-icon>\n                <h6 style=\"color: rgb(62, 179, 7);font-size: 10px;\"  >ADD ANOTHER COURSE DATE</h6>\n            </div>\n            \n                <div fxLayout=\"column\">\n                    <h4 [ngClass]=\"{'alert': !detailedForm.get('course_details').valid && verify}\" style=\"margin-bottom: 1px;\">Course Details</h4>\n                    <mat-form-field appearance=\"outline\" color=\"accent\">\n                        <mat-label>Add details</mat-label>\n                        <textarea formControlName=\"course_details\" matInput></textarea>\n                      </mat-form-field>\n                   </div>\n        </form>\n    \n    <router-outlet name=\"bottom\"></router-outlet>\n        \n    </div>\n    <div  fxFlex=\"0\" fxFlex.gt-md=\"50\" style=\"background-image: url('../../assets/bg_2.png');height: 100%;width: 100%;background-color: #F5F6FA;background-position: center;background-repeat: no-repeat;background-size: cover;\">\n \n    </div>\n </div>\n \n ";
-    /***/
-  },
-
-  /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/course/expandable/expandable.component.html":
-  /*!***************************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/course/expandable/expandable.component.html ***!
-    \***************************************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppCourseExpandableExpandableComponentHtml(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "<div fxLayout=\"column\" fxLayoutGap=\"10px\">\n\n  <div [formGroup]=\"form\" *ngFor=\"let form of expandFormArr;let i = index\">            \n    <mat-accordion>\n        <mat-expansion-panel hideToggle>\n           <mat-expansion-panel-header #panelH (click)=\"panelH._toggle()\">\n            <mat-panel-title fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\n                <div fxLayout=\"row\" fxLayoutGap=\"0px\">\n                    <h4 [ngClass]=\"{'alert': (!expandFormArr[i].get('cost').valid  || !expandFormArr[i].get('city').valid) && verify}\" style=\"margin: 0px;\"> {{ \"BATCH\" + (i+1) }}</h4>\n                    <div class=\"dates\" fxLayout fxLayoutGap=\"5px\">\n                      <div fxFlex=\"8\"></div>\n                      <div class=\"date\" fxLayout=\"row\" fxLayout.lt-sm=\"column\" fxLayoutAlign.gt-xs=\"center center\">        \n                        <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n                        <mat-datepicker #picker></mat-datepicker>\n                        <input matInput [matDatepicker]=\"picker\" formControlName=\"sDate\" placeholder=\"START DAY\">\n                       </div>\n                       <div class=\"date\" fxLayout=\"row\" fxLayout.lt-sm=\"column\"  fxLayoutAlign.gt-xs=\"center center\">        \n                        <mat-datepicker-toggle matSuffix [for]=\"piker\"></mat-datepicker-toggle>\n                        <mat-datepicker #piker></mat-datepicker>\n                        <input matInput [matDatepicker]=\"piker\" formControlName=\"eDate\" placeholder=\"END DAY\">\n                       </div>\n                    </div>\n\n                   \n                </div>\n                <div fxLayout=\"row\" fxLayoutAlign=\"center center\">\n                    <div>\n                        <button mat-icon-button [matMenuTriggerFor]=\"menu\" aria-label=\"Example icon-button with a menu\">\n                            <mat-icon>more_vert</mat-icon>\n                          </button>\n                          <mat-menu #menu=\"matMenu\">\n                            <button (click)=\"delete(i)\" mat-menu-item>\n                                <mat-icon color=\"warn\">delete</mat-icon>\n                              <span>Delete</span>\n                            </button>\n                            <button (click)=\"reset(i)\" mat-menu-item >\n                                <mat-icon color=\"accent\">rotate_right</mat-icon>\n                              <span>Reset</span>\n                            </button>\n                          </mat-menu>\n                    </div>\n                    <mat-icon color=\"accent\" matDatepickerToggleIcon (click)=\"panelH._toggle()\">keyboard_arrow_down</mat-icon>\n                </div>                \n            </mat-panel-title>\n          </mat-expansion-panel-header>\n          <div >\n               <div fxLayout=\"row\" fxLayoutAlign=\"start center\" fxLayoutAlign.lt-md=\"center center\" >\n                 \n                <div fxLayout=\"column\">\n                  <h4 [ngClass]=\"{'alert': !expandFormArr[i].get('cost').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Cost(Ex GST)</h4>\n                  <mat-form-field  class=\"matSize\" color=\"accent\"  appearance=\"outline\" >\n                      <input formControlName=\"cost\" matInput placeholder=\"Rs.\">\n                   </mat-form-field>\n                   \n                 </div>\n               </div>\n               <div fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"start center\" fxLayoutGap=\"10px\">\n                \n                <div>\n                    <h4 [ngClass]=\"{'alert': !expandFormArr[i].get('lng').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Languages</h4>\n                    <mat-form-field class=\"matSize\"  appearance=\"outline\" color=\"accent\">\n                      \n                      <mat-select formControlName=\"lng\" placeholder=\"select languages\" multiple>\n                        <mat-option *ngFor=\"let language of lngs\" [value]=\"language\">{{language}}</mat-option>\n                      </mat-select>\n                    </mat-form-field>\n                  </div>\n                  <div fxLayout=\"column\" >\n                    <h4 [ngClass]=\"{'alert':!expandFormArr[i].get('city').valid && verify}\" style=\"font-size: 12px;margin: 0px;\">Course Location</h4>\n                  <mat-form-field class=\"matSize\"   appearance=\"outline\" color=\"accent\">\n                   \n                    <mat-select formControlName=\"city\" placeholder=\"select city\">\n                      <mat-option  *ngFor=\"let city of cits\" [value]=\"city\">\n                        {{city}}\n                      </mat-option>\n                    </mat-select>\n                  </mat-form-field>\n                 \n                   </div>\n\n               </div>\n               <div fxLayout=\"row\" fxLayout.lt-md=\"column\" fxLayoutAlign=\"start center\" fxLayoutGap=\"20px\">\n                   <div>\n                       <p [ngClass]=\"{'alert': !expandFormArr[i].get('weekend').valid && verify}\">is this a weekend course</p>\n                   </div>\n                   <div>\n                    <mat-radio-group formControlName=\"weekend\" aria-label=\"Select an option\" fxLayoutGap=\"20px\"> \n                        <mat-radio-button value=\"yes\"> YES </mat-radio-button>\n                        <mat-radio-button value=\"no\"> NO </mat-radio-button>\n                      </mat-radio-group>\n                   </div>\n               </div>\n          </div>\n        </mat-expansion-panel>\n    </mat-accordion>\n  </div> \n</div>\n\n";
-    /***/
-  },
-
-  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/review/review.component.html":
   /*!************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/review/review.component.html ***!
@@ -152,46 +92,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     __webpack_exports__["default"] = "<div class=\"main\" fxLayout=\"row\">\n    <div class=\"main1\" fxLayout=\"column\" fxFlex=\"100\" fxFlex.gt-md=\"50\" fxLayoutAlign=\"start start\" fxLayoutAlign.lt-md=\"start center\" fxLayoutGap=\"10px\">\n            <div>\n                <h2>Review Details</h2>\n            </div>\n            <div>\n                <h3>Course name:</h3>\n                <p>\n                    {{reviewData.course_name}}\n                </p>\n            </div>\n            <div>\n                <h3>Aircraft type:</h3>\n                <p>\n                    {{reviewData.aircraft_type}}\n                </p>                 \n            </div>\n            <div *ngFor=\"let batch of reviewData.batch\">\n                <div>\n                    <h3>Course city:</h3>\n                    <p>\n                        {{batch.city}}\n                    </p>\n                </div>\n                <div>\n                    <h3>Course cost:</h3>\n                    <p>\n                        {{batch.cost}}\n                    </p>\n                </div>\n                <div>\n                    <h3>Languages selected:</h3>\n                    <p *ngFor=\"let lang of batch.lng\">\n                        {{lang}}\n                    </p>\n                </div>\n            </div>\n            <div>\n                <h3>Course Details:</h3>\n                <p>\n                    {{reviewData.course_details}}\n                </p>\n            </div>\n    </div>\n    <div  fxFlex=\"0\" fxFlex.gt-md=\"50\" style=\"background-image: url('../../assets/bg_2.png');height: 100%;width: 100%;background-color: #F5F6FA;background-position: center;background-repeat: no-repeat;background-size: cover;\">\n \n    </div>\n</div>\n";
-    /***/
-  },
-
-  /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/upload/main-upload/main-upload.component.html":
-  /*!*****************************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/upload/main-upload/main-upload.component.html ***!
-    \*****************************************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppUploadMainUploadMainUploadComponentHtml(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "<div fxLayout=\"column\" fxLayoutGap=\"10px\" fxLayoutGap.lt-md=\"10px\" fxLayoutGap.lt-sm=\"10px\">\n   <div *ngFor=\"let category of categories;let i=index;\" fxLayout=\"column\" >\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between\">\n          <div fxLayout=\"row\" fxLayoutGap=\"10px\" >\n             <h5>{{category}}</h5>\n             <h5 *ngIf=\"i!==1\" style=\"font-size: 12px;font-weight: 100;\">(Optional)</h5>\n             <h5 *ngIf=\"i==1\" [ngClass]=\"{'alert': compulsory}\"  style=\"font-size: 12px;font-weight: 100;\">(Required)</h5>\n             \n          </div>\n          <div>\n            <h5 style=\"color: blue;cursor: pointer;\" (click)=\"fileInput.click()\">  \n               UPLOAD\n               <input #fileInput type=\"file\" (change)=\"onFile($event.target.files,i)\" style=\"display:none;\" />\n             </h5>\n          </div>\n      </div>\n      <mat-divider></mat-divider><div  style=\"padding: 8px;color: red;\" *ngIf=\"compulsory && i===1\">this is Required</div>\n      <mat-list  fxLayout=\"column\" >\n         <div  *ngFor=\"let item of itemsArr[i];let in=index\" >\n            <div fxLayout style=\"cursor: pointer;\">\n              <mat-list-item > {{item}} </mat-list-item>\n              <mat-icon (click)=\"delete(i,in)\" color=\"warn\">delete</mat-icon>\n            </div>\n           \n           \n         </div>\n       \n     </mat-list>\n  </div>\n  \n</div>\n";
-    /***/
-  },
-
-  /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/upload/upload.component.html":
-  /*!************************************************************************************!*\
-    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/upload/upload.component.html ***!
-    \************************************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function node_modulesRawLoaderDistCjsJsSrcAppUploadUploadComponentHtml(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "<div class=\"main\" fxLayout=\"row\">\n   <div  fxFlex=\"100\" fxFlex.gt-md=\"50\" >\n       <div class=\"main1\">\n        <div style=\"margin-top: 0px;\" fxLayout=\"column\">\n            <h1  style=\"margin: 0px;text-align: center;\">Add some details of your training institute</h1>\n           <div fxLayout=\"column\">\n               <h5>INSTITUTE LOGO</h5>\n               <div fxLayout>\n                 <img src=\"../../assets/ic_logoiid.png\">\n               </div>\n           </div>\n           <div fxLayout=\"column\" fxLayoutGap=\"1px\" >\n                <h5> NAME OF THE INSTITUTE</h5>\n                <mat-form-field style=\"width: 100%;border: 0px;padding: 0px;\" appearance=\"outline\" >\n                   <input style=\"border-top: 0px;\" matInput placeholder=\"Name of the institute\">\n                </mat-form-field>\n           </div>\n           <div>\n              <router-outlet name=\"uploads\"></router-outlet>\n           </div>\n           \n        </div> \n       </div>\n       <router-outlet name=\"bottom\"></router-outlet>\n      \n       \n         \n      \n      \n    \n   </div>\n   <div fxFlex=\"0\" fxFlex.gt-sm=\"50\" style=\"background-image: url('../../assets/bg_1.png');height: 100%;width: 100%;background-color: #F5F6FA;background-position: center;background-repeat: no-repeat;background-size: cover;\">\n\n   </div>\n   \n</div>\n\n";
     /***/
   },
 
@@ -800,6 +700,94 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
+  "./src/app/app-routing.module.ts":
+  /*!***************************************!*\
+    !*** ./src/app/app-routing.module.ts ***!
+    \***************************************/
+
+  /*! exports provided: AppRoutingModule */
+
+  /***/
+  function srcAppAppRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function () {
+      return AppRoutingModule;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _review_review_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./review/review.component */
+    "./src/app/review/review.component.ts");
+
+    var routes = [{
+      path: '',
+      redirectTo: '/mainLoad',
+      pathMatch: 'full'
+    }, {
+      path: "mainLoad",
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | upload-upload-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("upload-upload-module")]).then(__webpack_require__.bind(null,
+        /*! ./upload/upload.module */
+        "./src/app/upload/upload.module.ts")).then(function (m) {
+          return m.uploadModule;
+        });
+      }
+    }, {
+      path: "formPage",
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | course-course-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("course-course-module")]).then(__webpack_require__.bind(null,
+        /*! ./course/course.module */
+        "./src/app/course/course.module.ts")).then(function (m) {
+          return m.courseModule;
+        });
+      }
+    }, {
+      path: 'review',
+      component: _review_review_component__WEBPACK_IMPORTED_MODULE_3__["ReviewComponent"]
+    }];
+
+    var AppRoutingModule = function AppRoutingModule() {
+      _classCallCheck(this, AppRoutingModule);
+    };
+
+    AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+      imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, {
+        preloadingStrategy: _angular_router__WEBPACK_IMPORTED_MODULE_2__["PreloadAllModules"]
+      })],
+      exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+    })], AppRoutingModule);
+    /***/
+  },
+
+  /***/
   "./src/app/app.component.css":
   /*!***********************************!*\
     !*** ./src/app/app.component.css ***!
@@ -932,340 +920,62 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _course_course_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ./course/course.component */
-    "./src/app/course/course.component.ts");
-    /* harmony import */
-
-
-    var _upload_upload_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./upload/upload.component */
-    "./src/app/upload/upload.component.ts");
-    /* harmony import */
-
-
-    var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/flex-layout */
     "./node_modules/@angular/flex-layout/esm2015/flex-layout.js");
     /* harmony import */
 
 
-    var _angular_material_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-    /*! @angular/material/button */
-    "./node_modules/@angular/material/esm2015/button.js");
-    /* harmony import */
-
-
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-    /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
-    /* harmony import */
-
-
-    var _angular_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! @angular/material */
     "./node_modules/@angular/material/esm2015/material.js");
     /* harmony import */
 
 
-    var _angular_material_divider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
-    /*! @angular/material/divider */
-    "./node_modules/@angular/material/esm2015/divider.js");
-    /* harmony import */
-
-
-    var _angular_material_list__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
-    /*! @angular/material/list */
-    "./node_modules/@angular/material/esm2015/list.js");
-    /* harmony import */
-
-
-    var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
-    /*! @angular/material/toolbar */
-    "./node_modules/@angular/material/esm2015/toolbar.js");
-    /* harmony import */
-
-
-    var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    var _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! @angular/material/progress-bar */
     "./node_modules/@angular/material/esm2015/progress-bar.js");
     /* harmony import */
 
 
-    var _common_components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    var _common_components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! ./common/components/toolbar/toolbar.component */
     "./src/app/common/components/toolbar/toolbar.component.ts");
     /* harmony import */
 
 
-    var _angular_material_radio__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
-    /*! @angular/material/radio */
-    "./node_modules/@angular/material/esm2015/radio.js");
-    /* harmony import */
-
-
-    var _angular_material_expansion__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
-    /*! @angular/material/expansion */
-    "./node_modules/@angular/material/esm2015/expansion.js");
-    /* harmony import */
-
-
-    var _angular_material_icon__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
-    /*! @angular/material/icon */
-    "./node_modules/@angular/material/esm2015/icon.js");
-    /* harmony import */
-
-
-    var _angular_material_select__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
-    /*! @angular/material/select */
-    "./node_modules/@angular/material/esm2015/select.js");
-    /* harmony import */
-
-
-    var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
-    /*! @angular/material/datepicker */
-    "./node_modules/@angular/material/esm2015/datepicker.js");
-    /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
-    /* harmony import */
-
-
-    var _upload_main_upload_main_upload_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
-    /*! ./upload/main-upload/main-upload.component */
-    "./src/app/upload/main-upload/main-upload.component.ts");
-    /* harmony import */
-
-
-    var _common_components_bottom_bottom_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
-    /*! ./common/components/bottom/bottom.component */
-    "./src/app/common/components/bottom/bottom.component.ts");
-    /* harmony import */
-
-
-    var _course_expandable_expandable_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
-    /*! ./course/expandable/expandable.component */
-    "./src/app/course/expandable/expandable.component.ts");
-    /* harmony import */
-
-
-    var _common_services_data_storage_service__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+    var _common_services_data_storage_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./common/services/data-storage.service */
     "./src/app/common/services/data-storage.service.ts");
     /* harmony import */
 
 
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
     /* harmony import */
 
 
-    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
-    /*! @angular/material/dialog */
-    "./node_modules/@angular/material/esm2015/dialog.js");
-    /* harmony import */
-
-
-    var _review_review_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
+    var _review_review_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./review/review.component */
     "./src/app/review/review.component.ts");
     /* harmony import */
 
 
-    var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
-    /*! @angular/material/progress-spinner */
-    "./node_modules/@angular/material/esm2015/progress-spinner.js");
-
-    var allRoutes = [{
-      path: '',
-      redirectTo: '/mainLoad',
-      pathMatch: 'full'
-    }, {
-      path: 'mainLoad',
-      component: _upload_upload_component__WEBPACK_IMPORTED_MODULE_6__["UploadComponent"],
-      children: [{
-        path: '',
-        component: _upload_main_upload_main_upload_component__WEBPACK_IMPORTED_MODULE_22__["MainUploadComponent"],
-        outlet: 'uploads'
-      }, {
-        path: '',
-        component: _common_components_bottom_bottom_component__WEBPACK_IMPORTED_MODULE_23__["BottomComponent"],
-        outlet: 'buttons'
-      }, {
-        path: '',
-        component: _common_components_bottom_bottom_component__WEBPACK_IMPORTED_MODULE_23__["BottomComponent"],
-        outlet: 'bottom'
-      }]
-    }, {
-      path: 'formPage',
-      component: _course_course_component__WEBPACK_IMPORTED_MODULE_5__["CourseComponent"],
-      children: [{
-        path: '',
-        component: _course_expandable_expandable_component__WEBPACK_IMPORTED_MODULE_24__["ExpandableComponent"],
-        outlet: 'expand'
-      }, {
-        path: '',
-        component: _common_components_bottom_bottom_component__WEBPACK_IMPORTED_MODULE_23__["BottomComponent"],
-        outlet: 'buttons'
-      }, {
-        path: '',
-        component: _common_components_bottom_bottom_component__WEBPACK_IMPORTED_MODULE_23__["BottomComponent"],
-        outlet: 'bottom'
-      }]
-    }, {
-      path: 'review',
-      component: _review_review_component__WEBPACK_IMPORTED_MODULE_28__["ReviewComponent"]
-    }];
+    var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./app-routing.module */
+    "./src/app/app-routing.module.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _upload_upload_component__WEBPACK_IMPORTED_MODULE_6__["UploadComponent"], _common_components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_15__["ToolbarComponent"], _course_course_component__WEBPACK_IMPORTED_MODULE_5__["CourseComponent"], _upload_main_upload_main_upload_component__WEBPACK_IMPORTED_MODULE_22__["MainUploadComponent"], _common_components_bottom_bottom_component__WEBPACK_IMPORTED_MODULE_23__["BottomComponent"], _course_expandable_expandable_component__WEBPACK_IMPORTED_MODULE_24__["ExpandableComponent"], _review_review_component__WEBPACK_IMPORTED_MODULE_28__["ReviewComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_router__WEBPACK_IMPORTED_MODULE_21__["RouterModule"].forRoot(allRoutes), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_26__["HttpClientModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_7__["FlexLayoutModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatFormFieldModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatInputModule"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_11__["MatDividerModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_12__["MatListModule"], _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_13__["MatToolbarModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_14__["MatProgressBarModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], _angular_material_radio__WEBPACK_IMPORTED_MODULE_16__["MatRadioModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_17__["MatExpansionModule"], _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatMenuModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_18__["MatIconModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_19__["MatSelectModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_20__["MatDatepickerModule"], _angular_material__WEBPACK_IMPORTED_MODULE_10__["MatNativeDateModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_27__["MatDialogModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_29__["MatProgressSpinnerModule"]],
-      providers: [_common_services_data_storage_service__WEBPACK_IMPORTED_MODULE_25__["DataStorageService"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _common_components_toolbar_toolbar_component__WEBPACK_IMPORTED_MODULE_8__["ToolbarComponent"], _review_review_component__WEBPACK_IMPORTED_MODULE_11__["ReviewComponent"]],
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatNativeDateModule"], _angular_flex_layout__WEBPACK_IMPORTED_MODULE_5__["FlexLayoutModule"], _angular_material_progress_bar__WEBPACK_IMPORTED_MODULE_7__["MatProgressBarModule"]],
+      providers: [_common_services_data_storage_service__WEBPACK_IMPORTED_MODULE_9__["DataStorageService"]],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
     })], AppModule);
-    /***/
-  },
-
-  /***/
-  "./src/app/common/components/bottom/bottom.component.css":
-  /*!***************************************************************!*\
-    !*** ./src/app/common/components/bottom/bottom.component.css ***!
-    \***************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppCommonComponentsBottomBottomComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = ".bottom {\n    text-align: center;\n    position: -webkit-sticky;\n    position: sticky;\n    z-index: 2000;\n    bottom: 0;\n    font-size: 40px;\n    height: 50px;\n    background-color: white;\n    padding-right: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tbW9uL2NvbXBvbmVudHMvYm90dG9tL2JvdHRvbS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0lBQ2xCLHdCQUFnQjtJQUFoQixnQkFBZ0I7SUFDaEIsYUFBYTtJQUNiLFNBQVM7SUFDVCxlQUFlO0lBQ2YsWUFBWTtJQUNaLHVCQUF1QjtJQUN2QixtQkFBbUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9jb21tb24vY29tcG9uZW50cy9ib3R0b20vYm90dG9tLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYm90dG9tIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgcG9zaXRpb246IHN0aWNreTtcbiAgICB6LWluZGV4OiAyMDAwO1xuICAgIGJvdHRvbTogMDtcbiAgICBmb250LXNpemU6IDQwcHg7XG4gICAgaGVpZ2h0OiA1MHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIHBhZGRpbmctcmlnaHQ6IDEwcHg7XG59XG4iXX0= */";
-    /***/
-  },
-
-  /***/
-  "./src/app/common/components/bottom/bottom.component.ts":
-  /*!**************************************************************!*\
-    !*** ./src/app/common/components/bottom/bottom.component.ts ***!
-    \**************************************************************/
-
-  /*! exports provided: BottomComponent */
-
-  /***/
-  function srcAppCommonComponentsBottomBottomComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "BottomComponent", function () {
-      return BottomComponent;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _services_data_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../../services/data-storage.service */
-    "./src/app/common/services/data-storage.service.ts");
-    /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
-    /* harmony import */
-
-
-    var _upload_service_upload_files_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ../../../upload/service/upload-files.service */
-    "./src/app/upload/service/upload-files.service.ts");
-
-    var BottomComponent = /*#__PURE__*/function () {
-      function BottomComponent(data, uploadService, router) {
-        _classCallCheck(this, BottomComponent);
-
-        this.data = data;
-        this.uploadService = uploadService;
-        this.router = router;
-      }
-
-      _createClass(BottomComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this = this;
-
-          console.log("bottom");
-          this.sb = false;
-          this.data.componentEmitter.subscribe(function (comp) {
-            comp === "form" ? _this.sb = true : _this.sb = false;
-          });
-          this.data.spinner.subscribe(function (val) {
-            val === "on" ? _this.spin = true : _this.spin = false;
-          });
-        }
-      }, {
-        key: "next",
-        value: function next() {
-          if (this.uploadService.items[this.uploadService.items.length - 2].length > 0) {
-            this.router.navigate(['/formPage']);
-          } else {
-            this.data.requiredEmitter.next(true);
-          }
-        }
-      }, {
-        key: "verify",
-        value: function verify() {
-          this.data.verifyOnEmitter.next(true);
-          this.data.submitForm();
-        }
-      }]);
-
-      return BottomComponent;
-    }();
-
-    BottomComponent.ctorParameters = function () {
-      return [{
-        type: _services_data_storage_service__WEBPACK_IMPORTED_MODULE_2__["DataStorageService"]
-      }, {
-        type: _upload_service_upload_files_service__WEBPACK_IMPORTED_MODULE_4__["UploadFilesService"]
-      }, {
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
-      }];
-    };
-
-    BottomComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-bottom',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./bottom.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/common/components/bottom/bottom.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./bottom.component.css */
-      "./src/app/common/components/bottom/bottom.component.css"))["default"]]
-    })], BottomComponent);
     /***/
   },
 
@@ -1338,12 +1048,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(ToolbarComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          var _this2 = this;
+          var _this = this;
 
           console.log("top");
           this.data.componentEmitter.subscribe(function (comp) {
-            if (comp === "upload") _this2.load = 40;else if (comp === "form") _this2.load = 80;else _this2.load = 100;
-            console.log(_this2.load);
+            if (comp === "upload") _this.load = 40;else if (comp === "form") _this.load = 80;else _this.load = 100;
+            console.log(_this.load);
           });
         }
       }]);
@@ -1506,7 +1216,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var DataStorageService = /*#__PURE__*/function () {
       function DataStorageService(route, apis) {
-        var _this3 = this;
+        var _this2 = this;
 
         _classCallCheck(this, DataStorageService);
 
@@ -1524,7 +1234,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.spinner = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"]("");
         this.route.events.subscribe(function (e) {
           if (e instanceof _angular_router__WEBPACK_IMPORTED_MODULE_4__["NavigationStart"]) {
-            if (e.url === "/mainLoad" || e.url === "/") _this3.componentEmitter.next("upload");else if (e.url === "/formPage") _this3.componentEmitter.next("form");else _this3.componentEmitter.next("review");
+            if (e.url === "/mainLoad" || e.url === "/") _this2.componentEmitter.next("upload");else if (e.url === "/formPage") _this2.componentEmitter.next("form");else _this2.componentEmitter.next("review");
           }
         });
         this.expansionForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
@@ -1580,7 +1290,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "submitForm",
         value: function submitForm() {
-          var _this4 = this;
+          var _this3 = this;
 
           if (this.validate()) {
             var val = this.detailsForm.value;
@@ -1591,11 +1301,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             val["batch"] = exp;
             this.apis.storeFormData(val);
             this.apis.geFormData().subscribe(function (response) {
-              _this4.setData(response);
+              _this3.setData(response);
 
-              _this4.spinner.next("off");
+              _this3.spinner.next("off");
 
-              _this4.route.navigate(['/review']);
+              _this3.route.navigate(['/review']);
             });
             this.spinner.next("on");
           }
@@ -1616,232 +1326,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     DataStorageService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
     })], DataStorageService);
-    /***/
-  },
-
-  /***/
-  "./src/app/course/course.component.css":
-  /*!*********************************************!*\
-    !*** ./src/app/course/course.component.css ***!
-    \*********************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppCourseCourseComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = ".main{\n    width: 100%;\n    height: 100%;\n    z-index: 1;\n    position: absolute;\n}\n.main1{\n    padding: 10px 80px 0px 80px;\n    \n}\n.alert{\n    color: red;\n}\n@media(max-width: 425px){\n    .main1{\n        padding : 10px;\n    }\n    h1{\n        font-size: 20px;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY291cnNlL2NvdXJzZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWixVQUFVO0lBQ1Ysa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSwyQkFBMkI7O0FBRS9CO0FBRUE7SUFDSSxVQUFVO0FBQ2Q7QUFFQTtJQUNJO1FBQ0ksY0FBYztJQUNsQjtJQUNBO1FBQ0ksZUFBZTtJQUNuQjtBQUNKIiwiZmlsZSI6InNyYy9hcHAvY291cnNlL2NvdXJzZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1haW57XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHotaW5kZXg6IDE7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xufVxuLm1haW4xe1xuICAgIHBhZGRpbmc6IDEwcHggODBweCAwcHggODBweDtcbiAgICBcbn1cblxuLmFsZXJ0e1xuICAgIGNvbG9yOiByZWQ7XG59XG5cbkBtZWRpYShtYXgtd2lkdGg6IDQyNXB4KXtcbiAgICAubWFpbjF7XG4gICAgICAgIHBhZGRpbmcgOiAxMHB4O1xuICAgIH1cbiAgICBoMXtcbiAgICAgICAgZm9udC1zaXplOiAyMHB4O1xuICAgIH1cbn0iXX0= */";
-    /***/
-  },
-
-  /***/
-  "./src/app/course/course.component.ts":
-  /*!********************************************!*\
-    !*** ./src/app/course/course.component.ts ***!
-    \********************************************/
-
-  /*! exports provided: CourseComponent */
-
-  /***/
-  function srcAppCourseCourseComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "CourseComponent", function () {
-      return CourseComponent;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _common_services_data_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../common/services/data-storage.service */
-    "./src/app/common/services/data-storage.service.ts");
-
-    var CourseComponent = /*#__PURE__*/function () {
-      function CourseComponent(data) {
-        _classCallCheck(this, CourseComponent);
-
-        this.data = data;
-      }
-
-      _createClass(CourseComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this5 = this;
-
-          console.log("form page");
-          this.detailedForm = this.data.detailsForm;
-          this.data.verifyOnEmitter.subscribe(function (req) {
-            _this5.verify = true;
-          });
-        }
-      }, {
-        key: "add_batch",
-        value: function add_batch() {
-          this.data.add_batch();
-          this.data.verifyOffEmitter.next(false);
-        }
-      }]);
-
-      return CourseComponent;
-    }();
-
-    CourseComponent.ctorParameters = function () {
-      return [{
-        type: _common_services_data_storage_service__WEBPACK_IMPORTED_MODULE_2__["DataStorageService"]
-      }];
-    };
-
-    CourseComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-course',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./course.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/course/course.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./course.component.css */
-      "./src/app/course/course.component.css"))["default"]]
-    })], CourseComponent);
-    /***/
-  },
-
-  /***/
-  "./src/app/course/expandable/expandable.component.css":
-  /*!************************************************************!*\
-    !*** ./src/app/course/expandable/expandable.component.css ***!
-    \************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppCourseExpandableExpandableComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "h4{\n    font-weight: 400;\n}\n\n.date{\n    font-size: 14px;\n}\n\n::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}\n\n::ng-deep .mat-form-field-appearance-outline .mat-form-field-label { margin-top:-15px; }\n\n.matSize{\n    width: 180px;\n}\n\n.alert{\n    color: red;\n}\n\n@media(max-width:425px){\n    h5{\n        font-size: 18px;\n    }\n    .date{\n        font-size: 10px;\n       \n    }\n}\n\n@media(max-width:768px){\n    div.h5{\n        font-size: 9px;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY291cnNlL2V4cGFuZGFibGUvZXhwYW5kYWJsZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFLQSx5REFBeUQsNkJBQTZCLENBQUM7O0FBQ3ZGLHFFQUFxRSxnQkFBZ0IsRUFBRTs7QUFFdkY7SUFDSSxZQUFZO0FBQ2hCOztBQUNBO0lBQ0ksVUFBVTtBQUNkOztBQUVBO0lBQ0k7UUFDSSxlQUFlO0lBQ25CO0lBQ0E7UUFDSSxlQUFlOztJQUVuQjtBQUNKOztBQUVBO0lBQ0k7UUFDSSxjQUFjO0lBQ2xCO0FBQ0oiLCJmaWxlIjoic3JjL2FwcC9jb3Vyc2UvZXhwYW5kYWJsZS9leHBhbmRhYmxlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoNHtcbiAgICBmb250LXdlaWdodDogNDAwO1xufVxuXG4uZGF0ZXtcbiAgICBmb250LXNpemU6IDE0cHg7XG59XG5cblxuXG5cbjo6bmctZGVlcCAubWF0LWZvcm0tZmllbGQtZmxleCA+IC5tYXQtZm9ybS1maWVsZC1pbmZpeCB7IHBhZGRpbmc6IDAuNGVtIDBweCAhaW1wb3J0YW50O31cbjo6bmctZGVlcCAubWF0LWZvcm0tZmllbGQtYXBwZWFyYW5jZS1vdXRsaW5lIC5tYXQtZm9ybS1maWVsZC1sYWJlbCB7IG1hcmdpbi10b3A6LTE1cHg7IH1cblxuLm1hdFNpemV7XG4gICAgd2lkdGg6IDE4MHB4O1xufVxuLmFsZXJ0e1xuICAgIGNvbG9yOiByZWQ7XG59XG5cbkBtZWRpYShtYXgtd2lkdGg6NDI1cHgpe1xuICAgIGg1e1xuICAgICAgICBmb250LXNpemU6IDE4cHg7XG4gICAgfVxuICAgIC5kYXRle1xuICAgICAgICBmb250LXNpemU6IDEwcHg7XG4gICAgICAgXG4gICAgfVxufVxuXG5AbWVkaWEobWF4LXdpZHRoOjc2OHB4KXtcbiAgICBkaXYuaDV7XG4gICAgICAgIGZvbnQtc2l6ZTogOXB4O1xuICAgIH1cbn0iXX0= */";
-    /***/
-  },
-
-  /***/
-  "./src/app/course/expandable/expandable.component.ts":
-  /*!***********************************************************!*\
-    !*** ./src/app/course/expandable/expandable.component.ts ***!
-    \***********************************************************/
-
-  /*! exports provided: ExpandableComponent */
-
-  /***/
-  function srcAppCourseExpandableExpandableComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "ExpandableComponent", function () {
-      return ExpandableComponent;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var src_app_common_services_data_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! src/app/common/services/data-storage.service */
-    "./src/app/common/services/data-storage.service.ts");
-
-    var ExpandableComponent = /*#__PURE__*/function () {
-      //@ViewChild('poke',{static:true})poke:ElementRef;
-      function ExpandableComponent(data) {
-        _classCallCheck(this, ExpandableComponent);
-
-        this.data = data;
-        this.cits = [];
-        this.lngs = [];
-        this.expandFormArr = [];
-      }
-
-      _createClass(ExpandableComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this6 = this;
-
-          console.log("expand");
-          this.verify = false;
-          this.cits = this.data.cities;
-          this.lngs = this.data.languages;
-          this.expandForm = this.data.expansionForm;
-          this.expandFormArr = this.data.expansionFormArr;
-          console.log(this.expandFormArr);
-          this.data.verifyOnEmitter.subscribe(function (req) {
-            _this6.verify = true;
-          });
-          this.data.verifyOffEmitter.subscribe(function (req) {
-            _this6.verify = false;
-          });
-        }
-      }, {
-        key: "delete",
-        value: function _delete(i) {
-          this.data["delete"](i);
-        }
-      }, {
-        key: "reset",
-        value: function reset(i) {
-          this.data.reset(i);
-        }
-      }]);
-
-      return ExpandableComponent;
-    }();
-
-    ExpandableComponent.ctorParameters = function () {
-      return [{
-        type: src_app_common_services_data_storage_service__WEBPACK_IMPORTED_MODULE_2__["DataStorageService"]
-      }];
-    };
-
-    ExpandableComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-expandable',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./expandable.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/course/expandable/expandable.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./expandable.component.css */
-      "./src/app/course/expandable/expandable.component.css"))["default"]]
-    })], ExpandableComponent);
     /***/
   },
 
@@ -1936,275 +1420,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       /*! ./review.component.css */
       "./src/app/review/review.component.css"))["default"]]
     })], ReviewComponent);
-    /***/
-  },
-
-  /***/
-  "./src/app/upload/main-upload/main-upload.component.css":
-  /*!**************************************************************!*\
-    !*** ./src/app/upload/main-upload/main-upload.component.css ***!
-    \**************************************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppUploadMainUploadMainUploadComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = ".mat-list .mat-list-item{\n    font-size: 10px;\n    height: 18px;\n}\n\n.alert{\n    color:red;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXBsb2FkL21haW4tdXBsb2FkL21haW4tdXBsb2FkLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxlQUFlO0lBQ2YsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLFNBQVM7QUFDYiIsImZpbGUiOiJzcmMvYXBwL3VwbG9hZC9tYWluLXVwbG9hZC9tYWluLXVwbG9hZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC1saXN0IC5tYXQtbGlzdC1pdGVte1xuICAgIGZvbnQtc2l6ZTogMTBweDtcbiAgICBoZWlnaHQ6IDE4cHg7XG59XG5cbi5hbGVydHtcbiAgICBjb2xvcjpyZWQ7XG59Il19 */";
-    /***/
-  },
-
-  /***/
-  "./src/app/upload/main-upload/main-upload.component.ts":
-  /*!*************************************************************!*\
-    !*** ./src/app/upload/main-upload/main-upload.component.ts ***!
-    \*************************************************************/
-
-  /*! exports provided: MainUploadComponent */
-
-  /***/
-  function srcAppUploadMainUploadMainUploadComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "MainUploadComponent", function () {
-      return MainUploadComponent;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var src_app_common_services_data_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! src/app/common/services/data-storage.service */
-    "./src/app/common/services/data-storage.service.ts");
-    /* harmony import */
-
-
-    var _service_upload_files_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ../service/upload-files.service */
-    "./src/app/upload/service/upload-files.service.ts");
-
-    var MainUploadComponent = /*#__PURE__*/function () {
-      function MainUploadComponent(uploadService, data) {
-        _classCallCheck(this, MainUploadComponent);
-
-        this.uploadService = uploadService;
-        this.data = data;
-        this.formData = new FormData();
-        this.itemsArr = [[], [], []];
-        this.categories = ["INSTITUTE BROUCHER", "INSTITUTE GALLERY", "CERTIFICATIONS"];
-      }
-
-      _createClass(MainUploadComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {
-          var _this7 = this;
-
-          console.log("main upload");
-          this.itemsArr = this.uploadService.items;
-          this.data.requiredEmitter.subscribe(function (comp) {
-            _this7.compulsory = comp;
-          });
-        }
-      }, {
-        key: "onFile",
-        value: function onFile(files, i) {
-          //this.data.file.push(files.item(0));
-          //this.files=event.target.files[0];
-          //console.log(this.data.file);
-          //  this.formData.append('file' + i, this.data.file[0], "");
-          //this.formData.append('file' + i, files.item(0), "");
-          //  console.log(this.formData.getAll('file0'));
-          // this.formData.delete('file0');
-          //console.log(this.formData.getAll('file0'));
-          this.compulsory = false;
-          this.uploadService.upload(files.item(0).name, i);
-        }
-      }, {
-        key: "delete",
-        value: function _delete(i, j) {
-          this.uploadService.deleteFile(i, j);
-          console.log(i);
-          console.log(j);
-        }
-      }]);
-
-      return MainUploadComponent;
-    }();
-
-    MainUploadComponent.ctorParameters = function () {
-      return [{
-        type: _service_upload_files_service__WEBPACK_IMPORTED_MODULE_3__["UploadFilesService"]
-      }, {
-        type: src_app_common_services_data_storage_service__WEBPACK_IMPORTED_MODULE_2__["DataStorageService"]
-      }];
-    };
-
-    MainUploadComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-main-upload',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./main-upload.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/upload/main-upload/main-upload.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./main-upload.component.css */
-      "./src/app/upload/main-upload/main-upload.component.css"))["default"]]
-    })], MainUploadComponent);
-    /***/
-  },
-
-  /***/
-  "./src/app/upload/service/upload-files.service.ts":
-  /*!********************************************************!*\
-    !*** ./src/app/upload/service/upload-files.service.ts ***!
-    \********************************************************/
-
-  /*! exports provided: UploadFilesService */
-
-  /***/
-  function srcAppUploadServiceUploadFilesServiceTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "UploadFilesService", function () {
-      return UploadFilesService;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-
-    var UploadFilesService = /*#__PURE__*/function () {
-      function UploadFilesService() {
-        _classCallCheck(this, UploadFilesService);
-
-        this.items = [[], [], []];
-      }
-
-      _createClass(UploadFilesService, [{
-        key: "deleteFile",
-        value: function deleteFile(i, j) {
-          this.items[i].splice(j, 1);
-        }
-      }, {
-        key: "upload",
-        value: function upload(filename, i) {
-          this.items[i].push(filename);
-        }
-      }]);
-
-      return UploadFilesService;
-    }();
-
-    UploadFilesService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-      providedIn: 'root'
-    })], UploadFilesService);
-    /***/
-  },
-
-  /***/
-  "./src/app/upload/upload.component.css":
-  /*!*********************************************!*\
-    !*** ./src/app/upload/upload.component.css ***!
-    \*********************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function srcAppUploadUploadComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = ".main{\n    width: 100%;\n    height: 100%;\n    z-index: 1;\n    position: absolute;\n}\n\n::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}\n\n::ng-deep .mat-form-field-appearance-outline .mat-form-field-label { margin-top:-15px; }\n\n.main1{\n    padding: 10px 80px 0px 80px;\n    \n}\n\n.main2{\n    background-image: url('bg_1.png');\n}\n\n.main1 h5{\n    font-size: 12px;\n}\n\n.bottom {\n    text-align: center;\n    position: -webkit-sticky;\n    position: sticky;\n    z-index: 2000;\n    bottom: 0;\n    font-size: 40px;\n    height: 50px;\n    background-color: white;\n    padding-right: 10px;\n    \n}\n\n@media(max-width: 425px){\n    .main1{\n        padding : 10px;\n    }\n    h1{\n        font-size: 20px;\n    }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdXBsb2FkL3VwbG9hZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWixVQUFVO0lBQ1Ysa0JBQWtCO0FBQ3RCOztBQUVBLHlEQUF5RCw2QkFBNkIsQ0FBQzs7QUFDdkYscUVBQXFFLGdCQUFnQixFQUFFOztBQUV2RjtJQUNJLDJCQUEyQjs7QUFFL0I7O0FBQ0E7SUFDSSxpQ0FBOEM7QUFDbEQ7O0FBQ0E7SUFDSSxlQUFlO0FBQ25COztBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLHdCQUFnQjtJQUFoQixnQkFBZ0I7SUFDaEIsYUFBYTtJQUNiLFNBQVM7SUFDVCxlQUFlO0lBQ2YsWUFBWTtJQUNaLHVCQUF1QjtJQUN2QixtQkFBbUI7O0FBRXZCOztBQU9BO0lBQ0k7UUFDSSxjQUFjO0lBQ2xCO0lBQ0E7UUFDSSxlQUFlO0lBQ25CO0FBQ0oiLCJmaWxlIjoic3JjL2FwcC91cGxvYWQvdXBsb2FkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFpbntcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgei1pbmRleDogMTtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG59XG5cbjo6bmctZGVlcCAubWF0LWZvcm0tZmllbGQtZmxleCA+IC5tYXQtZm9ybS1maWVsZC1pbmZpeCB7IHBhZGRpbmc6IDAuNGVtIDBweCAhaW1wb3J0YW50O31cbjo6bmctZGVlcCAubWF0LWZvcm0tZmllbGQtYXBwZWFyYW5jZS1vdXRsaW5lIC5tYXQtZm9ybS1maWVsZC1sYWJlbCB7IG1hcmdpbi10b3A6LTE1cHg7IH1cblxuLm1haW4xe1xuICAgIHBhZGRpbmc6IDEwcHggODBweCAwcHggODBweDtcbiAgICBcbn1cbi5tYWluMntcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uL2Fzc2V0cy9iZ18xLnBuZycpO1xufVxuLm1haW4xIGg1e1xuICAgIGZvbnQtc2l6ZTogMTJweDtcbn1cbi5ib3R0b20ge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xuICAgIHotaW5kZXg6IDIwMDA7XG4gICAgYm90dG9tOiAwO1xuICAgIGZvbnQtc2l6ZTogNDBweDtcbiAgICBoZWlnaHQ6IDUwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgcGFkZGluZy1yaWdodDogMTBweDtcbiAgICBcbn1cblxuXG5cblxuXG5cbkBtZWRpYShtYXgtd2lkdGg6IDQyNXB4KXtcbiAgICAubWFpbjF7XG4gICAgICAgIHBhZGRpbmcgOiAxMHB4O1xuICAgIH1cbiAgICBoMXtcbiAgICAgICAgZm9udC1zaXplOiAyMHB4O1xuICAgIH1cbn0iXX0= */";
-    /***/
-  },
-
-  /***/
-  "./src/app/upload/upload.component.ts":
-  /*!********************************************!*\
-    !*** ./src/app/upload/upload.component.ts ***!
-    \********************************************/
-
-  /*! exports provided: UploadComponent */
-
-  /***/
-  function srcAppUploadUploadComponentTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "UploadComponent", function () {
-      return UploadComponent;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-
-    var UploadComponent = /*#__PURE__*/function () {
-      function UploadComponent() {
-        _classCallCheck(this, UploadComponent);
-      }
-
-      _createClass(UploadComponent, [{
-        key: "ngOnInit",
-        value: function ngOnInit() {}
-      }]);
-
-      return UploadComponent;
-    }();
-
-    UploadComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-upload',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./upload.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/upload/upload.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./upload.component.css */
-      "./src/app/upload/upload.component.css"))["default"]]
-    })], UploadComponent);
     /***/
   },
 
